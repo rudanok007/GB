@@ -16,6 +16,16 @@
                                 <a class="nav-link active" aria-current="page" href="{{ route('main') }}">Главная</a>
                                 <a class="nav-link" href="{{ route('news') }}">Новости</a>
                                 <a class="nav-link" href="{{ route('about') }}">О нас</a>
+
+{{--                            <div class="auth">--}}
+                                @if(!\Illuminate\Support\Facades\Auth::user())
+                                    <a class="nav-link" href="{{ route('login') }}">Авторизация</a>
+                                    @else
+                                    <a class="nav-link" href="{{ route('news.createNews') }}">Создать новость</a>
+                                    <a class="nav-link pull-right">{{ Auth()->user()->name }}</a>
+                                    <a class="nav-link pull-right" href="{{ route('logout') }}">Logout</a>
+                                @endif
+{{--                            </div>--}}
                             </div>
                         </div>
                     </div>
