@@ -13,6 +13,16 @@ Route::group([
         'uses' => 'AuthController@getLogin',
     ]);
 
+    Route::post('auth', [
+        'as'   => 'auth',
+        'uses' => 'AuthController@auth',
+    ]);
+
+    Route::get('logout', [
+        'as'   => 'logout',
+        'uses' => 'AuthController@logout',
+    ]);
+
 //    Route::post('login', [
 //        'as'   => 'login.post',
 //        'uses' => 'AuthController@postLogin',

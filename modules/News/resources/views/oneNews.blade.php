@@ -10,10 +10,10 @@
 
             <div class="col-lg-12">
                 <div class="card-small-text">
-                    {{ $oneNews['small-text']}}
+                    {{ $oneNews['description']}}
                 </div>
                     <div class="card-big-text">
-                    {{ $oneNews['big-text'] }}
+                    {{ $oneNews['fulltext'] }}
                     </div>
                             </div>
 
